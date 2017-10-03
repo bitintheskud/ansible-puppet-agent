@@ -5,6 +5,7 @@ Install and minimally configure puppet-agent.
 ## how to use 
 
 1. Create your inventory file under inventories/
+1. Create you puppet conf file under roles/puppet-agent/templates/
 1. Make sure at least one of the two variables that configure resolving puppet master is defined.
     * `pa_master_addr`
     * `pa_master_fqdn`
