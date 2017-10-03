@@ -1,0 +1,30 @@
+#
+# Example of inventorie file. 
+#
+# replace <nodename> by the server you want to post-install
+# replace <username>  with your user login.
+#
+webserver      ansible_ssh_host=webserver.example.com   ansible_user=user-admin 
+
+# Add servers in the puppet agent section that you want to
+# install puppet agent on.
+# Group match the profile.
+[production]
+webserver
+
+[development]
+webtest
+
+
+[all:vars]
+pa_master_fqdn=puppet
+pa_master_addr=192.85.63.21
+
+
+# Vars use for conf file
+#
+[production:vars]
+env=production
+
+[development:vars]
+env=development

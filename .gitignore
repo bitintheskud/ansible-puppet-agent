@@ -1,0 +1,12 @@
+# Only include the example inventory and template
+inventories/*
+!inventories/hosts.example
+
+roles/puppet-agent/templates/*
+!roles/puppet-agent/templates/puppet.conf.j2.example
+
+# Ignore Vim files
+*.sess
+*.swp
+*.swa
+
